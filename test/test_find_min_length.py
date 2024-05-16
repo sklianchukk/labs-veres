@@ -1,5 +1,5 @@
 import unittest
-import find_min_length
+from src.find_min_length import find_min_length, read_from_input
 
 
 class TestMinLength(unittest.TestCase):
@@ -18,9 +18,9 @@ class TestMinLength(unittest.TestCase):
         expected_root = "1"
         expected_length = 3
 
-        input_file = "input.txt"
-        graph, root = lab5.read_from_input(input_file)
-        length = lab5.find_min_length(graph, root)
+        input_file = "../src/input.txt"
+        graph, root = read_from_input(input_file)
+        length = find_min_length(graph, root)
 
         self.assertEqual(graph, expected_graph)
         self.assertEqual(root, expected_root)

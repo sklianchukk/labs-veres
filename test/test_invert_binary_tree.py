@@ -1,15 +1,15 @@
 import unittest
-import invert_binary_tree
+from src.invert_binary_tree import invert_binary_tree, BinaryTree
 
 class TestLab3(unittest.TestCase):
     def test_invert_binary_tree(self):
-        root = invert_binary_tree.BinaryTree(3)
-        root.left = invert_binary_tree.BinaryTree(9)
-        root.right = invert_binary_tree.BinaryTree(20)
-        root.left.left = invert_binary_tree.BinaryTree(12)
-        root.left.right = invert_binary_tree.BinaryTree(14)
+        root = BinaryTree(3)
+        root.left = BinaryTree(9)
+        root.right = BinaryTree(20)
+        root.left.left = BinaryTree(12)
+        root.left.right = BinaryTree(14)
 
-        invert_binary_tree.invert_binary_tree(root)
+        invert_binary_tree(root)
 
         self.assertEqual(root.value, 3)
         self.assertEqual(root.left.value, 20)

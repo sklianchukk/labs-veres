@@ -1,5 +1,5 @@
 import unittest
-from lab6 import find_min_beers
+from src.find_min_beers import find_min_beers
 
 class TestBeerSelection(unittest.TestCase):
     def test_find_min_beers1(self):
@@ -15,7 +15,7 @@ class TestBeerSelection(unittest.TestCase):
         self.assertEqual(result, 0)
 
     def test_find_min_beers4(self):
-        result = find_min_beers(3, 2, ["NN", "YY", "NY"])
+        result = find_min_beers(3, 2, "NN YY NY")
         self.assertEqual(result, 1)
 
 if __name__ == '__main__':

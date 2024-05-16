@@ -33,10 +33,10 @@ def write_to_output(length, file_path):
         file.write(str(length))
 
 
-input_file = "input.txt"
+input_file = "../src/input.txt"
 graph, root = read_from_input(input_file)
 
 length = find_min_length(graph, root)
 
-output_file = "output.txt"
+output_file = "../src/output.txt"
 write_to_output(length, output_file)
